@@ -120,7 +120,7 @@ define config.window_hide_transition = None
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 50
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
@@ -205,7 +205,7 @@ init python:
 ## The username and project name associated with an itch.io project, separated
 ## by a slash.
 
-define build.itch_project = "Lev/bunbun"
+define build.itch_project = "ozornayashoujo/bunbun"
 
 
 ## Language setting

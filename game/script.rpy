@@ -13,22 +13,22 @@ image bunbun test:
     "bunbun test2.png"
     0.5
     repeat
-
-screen windowframe():
-    image "gui/windowframe.png"
-    zorder 100
-
+     
 # The game starts here.
 
 label start:
 
+    stop music
+
     scene bg empty
 
+    show screen actionmenu
+
     show screen windowframe
-    
+
     n "And so it begins"
 
-    show bunbun test at right
+    show bunbun test
 
     b "The quick brown fox jumps over the lazy dog."
 
