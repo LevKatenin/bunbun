@@ -328,6 +328,13 @@ style main_menu_text is gui_text
 style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
+image rainmenu:
+    "bg_rainwindow/bgrainwindow1.png"
+    pause 1.0
+    "bg_rainwindow/bgrainwindow2.png"
+    pause 1.0
+    repeat
+
 style main_menu_frame:
     xsize 420
     yfill True

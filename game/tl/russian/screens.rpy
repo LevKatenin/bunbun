@@ -79,8 +79,8 @@ translate russian strings:
     new "{#auto_page}А"
 
     # game/screens.rpy:622
-    old "{#auto_page}Q"
-    new "{#auto_page}Б"
+    old "{#quick_page}Q"
+    new "{#quick_page}Б"
 
     # game/screens.rpy:628
     old ">"
@@ -91,8 +91,8 @@ translate russian strings:
     new "Загрузка в облако"
 
     # game/screens.rpy:636
-    old "Скачать из облака"
-    new ""
+    old "Download Sync"
+    new "Скачать из облака"
 
     # game/screens.rpy:695
     old "Display"
@@ -313,16 +313,3 @@ translate russian strings:
     # game/screens.rpy:1085
     old "Skipping"
     new ""
-
-# TODO: Translation updated at 2024-07-19 23:41
-
-translate russian strings:
-
-    # game/screens.rpy:617
-    old "{#quick_page}Q"
-    new ""
-
-    # game/screens.rpy:631
-    old "Download Sync"
-    new ""
-

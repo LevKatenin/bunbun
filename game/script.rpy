@@ -5,6 +5,8 @@
 
 define b = Character("bunbun")
 
+define n = Character("")
+
 image bunbun test:
     "bunbun test1.png"
     0.5
@@ -24,6 +26,8 @@ label start:
 
     show screen windowframe
     
+    n "And so it begins"
+
     show bunbun test at right
 
     b "The quick brown fox jumps over the lazy dog."
