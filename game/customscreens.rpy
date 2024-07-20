@@ -1,3 +1,5 @@
+
+
 ## The game overlay frame
 
 screen windowframe():
@@ -15,9 +17,9 @@ screen actionmenu():
     grid 2 2:
         xpos 1540 ypos 840         
 
-        textbutton _("Button1") 
+        textbutton _("Squeak") action Play("sound", config.sample_sound)
           
-        textbutton _("Button2") xpadding 20 
+        textbutton _("Back") xpadding 20 action Rollback()
         
         textbutton _("Button3") ypadding 10
             
