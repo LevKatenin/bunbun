@@ -1,0 +1,37 @@
+## TODO LIST / Idea list
+
+Add screens with no dialogue/text etc. For example, when in room
+    clicking should advance NOTHING, no text, only user ACTIONS should be able to progress the game
+
+Basic stat counters
+
+Time system
+    turn-based, each action progresses time by X amount. mod 24
+        add calendar, roll over days and weekdays
+
+        [23:00 Wed]
+        - do action
+        [23:30 Wed]
+
+    display time and date as overlay in HUD
+
+Sleep event
+    when action is sleep display specific event sequence
+        choose sequence to display based on stats and flags (maybe add flags that update dynamically with stat updates) 
+            action -> stat update ++ -- -> raise/lower flag
+                when action is sleep choose dream scene based on flags
+                    (update only before sleep?)
+
+Basic inventory management
+    Display overlay with icons OR list with item display and description on side
+        OR mouse-over description
+        ANDOR selection description
+
+Add room customization
+    add function to add/remove object decorations
+        add interactable objects
+    add function to change character sprite (costume)
+
+Limit player saving to select stages/screens/phases (exclude dream scenes)
+
+windowframe.png always has highest zorder
