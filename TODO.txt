@@ -48,7 +48,7 @@ ________________________________________________________________________________
 https://easings.net/
 Make actions adjust stats with RNG based on function. See link for possible reference
 
-idea: add door opening/closing mini-game
+add door opening/closing mini-game
     show window with a keyhole -> click to put in a key -> drag the side of the key to rotate it -> finish, close the window
 
 Computer interactions
@@ -60,7 +60,8 @@ Computer interactions
     add "buncord" (discord) - you input messages, they display in a window, scrolling up, and with a random interval the "friend" replies
         (all they say is scripted messages like "LOL" "that's crazy" "based" "cringe" etc.)
 
-
+If under status effect (extra low or high stat), unlock special item interactions
+    (fun and fatigue < 0 + knife, fun > 10 + something...) - you get the idea
 
 
 FINAL TASK:
