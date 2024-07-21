@@ -14,6 +14,8 @@ Basic inventory management
         ANDOR selection description
 
 Basic stat counters
+    make stats softcapped so only special actions can increase them over a certain limit
+        OR with no softcap, add items that will display a stat to be higher than it actually is, make status effects system
 
 Time system
     turn-based, each action progresses time by X amount. mod 24
@@ -32,8 +34,10 @@ Sleep event
                 when action is sleep choose dream scene based on flags
                     (update only before sleep?)
 
-
 Limit player saving to select stages/screens/phases (exclude dream scenes)
 
 windowframe.png always has highest zorder
     remove windowframe for dream scenes
+
+https://easings.net/
+Make actions adjust stats with RNG based on function. See link for possible reference
