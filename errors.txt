@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 513: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-                text _("Made with love (and {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n))
+File "game/customscreens.rpy", line 15: Line is indented, but the preceding zorder statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    grid 2 2:
+    ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Fri Jul 19 23:34:27 2024
+Sat Jul 20 17:41:43 2024

@@ -26,3 +26,11 @@ translate russian start_2c435af4:
     # b "Translate this too please."
     b "Переведи это тоже, пожалуйста."
 
+# TODO: Translation updated at 2024-07-20 19:39
+
+# game/script.rpy:29
+translate russian start_4463b4cf:
+
+    # n "And so it begins"
+    n "Вот и началось"
+
