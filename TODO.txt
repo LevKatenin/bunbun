@@ -16,6 +16,15 @@ Basic inventory management
 Basic stat counters
     add items that will display a stat to be higher than it actually is, make status effects system (flag system)
 
+Add item acquisition
+    create a new scene for the store
+        add overlay with clickable buttons to add items to inventory
+            check if the player has enough money to buy items
+                add special bunmom interaction if you use her credit card
+    add computer first computer interaction - buying items from bunzon
+        display list of items to buy
+            add basic item search?
+
 Usable items
     basic item functionality/usage. Click "use item" -> increase one stat by +1.
 
