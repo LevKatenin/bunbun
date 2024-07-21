@@ -3,6 +3,19 @@
 Add screens with no dialogue/text etc. For example, when in room
     clicking should advance NOTHING, no text, only user ACTIONS should be able to progress the game
 
+Time system
+    turn-based, each action progresses time by X amount. mod 24
+        add calendar, roll over days and weekdays
+
+        [23:00 Wed]
+        - do action
+        [23:30 Wed]
+
+    display time and weekday as overlay in HUD
+
+Create system of "rooms", going between which will not advance time
+    it can be "house" - "door" - "street" - "store" or any kind of basic "map"
+
 Add room customization
     add function to add/remove object decorations
         add interactable objects
@@ -16,6 +29,13 @@ Basic inventory management
 Basic stat counters
     add items that will display a stat to be higher than it actually is, make status effects system (flag system)
 
+Sleep event
+    when action is sleep display specific event sequence
+        choose sequence to display based on stats and flags (maybe add flags that update dynamically with stat updates) 
+            action -> stat update ++/-- -> raise/lower flag
+                when action is sleep choose dream scene based on flags
+                    (update only before sleep?)
+
 Add item acquisition
     create a new scene for the store
         add overlay with clickable buttons to add items to inventory
@@ -27,23 +47,6 @@ Add item acquisition
 
 Usable items
     basic item functionality/usage. Click "use item" -> increase one stat by +1.
-
-Time system
-    turn-based, each action progresses time by X amount. mod 24
-        add calendar, roll over days and weekdays
-
-        [23:00 Wed]
-        - do action
-        [23:30 Wed]
-
-    display time and weekday as overlay in HUD
-
-Sleep event
-    when action is sleep display specific event sequence
-        choose sequence to display based on stats and flags (maybe add flags that update dynamically with stat updates) 
-            action -> stat update ++/-- -> raise/lower flag
-                when action is sleep choose dream scene based on flags
-                    (update only before sleep?)
 
 Limit player saving to select stages/screens/phases (no saving during dream scenes)
 
