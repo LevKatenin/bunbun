@@ -50,6 +50,13 @@ Limit player saving to select stages/screens/phases (no saving during dream scen
 windowframe.png always has highest zorder
     hide windowframe for dream scenes
 
+Add achievement system
+    add achievement menu
+        display completion % ???
+
+Add artwork gallery
+    add dream replay gallery?
+
 __________________________________________________________________________________________________
 
 ## IDEAS
