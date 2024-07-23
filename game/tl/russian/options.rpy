@@ -4,5 +4,5 @@ translate russian strings:
 
     # game/options.rpy:15
     old "bunbun"
-    new "bunbun"
+    new "зая"
 

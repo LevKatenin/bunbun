@@ -130,12 +130,12 @@ style namebox_label is say_label
 
 
 style window:
-    xalign 0.5
+    xalign gui.textbox_xalign
     xfill True
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/textbox.png", xalign=0.05, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -327,6 +327,13 @@ style main_menu_vbox is vbox
 style main_menu_text is gui_text
 style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
+
+image rainmenu:
+    "bg_rainwindow/bgrainwindow1.png"
+    pause 1.0
+    "bg_rainwindow/bgrainwindow2.png"
+    pause 1.0
+    repeat
 
 style main_menu_frame:
     xsize 420
@@ -710,7 +717,7 @@ screen preferences():
 
                     label _("Text Speed")
 
-                    bar value Preference("text speed")
+                    bar value Preference("text speed") released Play("sound", config.sample_sound)
 
 
                 vbox:
@@ -719,27 +726,20 @@ screen preferences():
                         label _("Music Volume")
 
                         hbox:
-                            bar value Preference("music volume")
+                            bar value Preference("music volume") released Play("sound", config.sample_sound)
 
                     if config.has_sound:
 
                         label _("Sound Volume")
 
                         hbox:
-                            bar value Preference("sound volume")
-
-                            if config.sample_sound:
-                                textbutton _("Test") action Play("sound", config.sample_sound)
-
+                            bar value Preference("sound volume") released Play("sound", config.sample_sound)
 
                     if config.has_voice:
                         label _("Voice Volume")
 
                         hbox:
-                            bar value Preference("voice volume")
-
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
+                            bar value Preference("voice volume") released Play("sound", config.sample_sound)
 
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
@@ -818,167 +818,6 @@ style slider_button_text:
 
 style slider_vbox:
     xsize 675
-
-
-## Help screen #################################################################
-##
-## A screen that gives information about key and mouse bindings. It uses other
-## screens (keyboard_help, mouse_help, and gamepad_help) to display the actual
-## help.
-
-screen help():
-
-    tag menu
-
-    default device = "keyboard"
-
-    use game_menu(_("Help"), scroll="viewport"):
-
-        style_prefix "help"
-
-        vbox:
-            spacing 23
-
-            hbox:
-
-                textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
-                textbutton _("Mouse") action SetScreenVariable("device", "mouse")
-
-                if GamepadExists():
-                    textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
-
-            if device == "keyboard":
-                use keyboard_help
-            elif device == "mouse":
-                use mouse_help
-            elif device == "gamepad":
-                use gamepad_help
-
-
-screen keyboard_help():
-
-    hbox:
-        label _("Enter")
-        text _("Advances dialogue and activates the interface.")
-
-    hbox:
-        label _("Space")
-        text _("Advances dialogue without selecting choices.")
-
-    hbox:
-        label _("Arrow Keys")
-        text _("Navigate the interface.")
-
-    hbox:
-        label _("Escape")
-        text _("Accesses the game menu.")
-
-    hbox:
-        label _("Ctrl")
-        text _("Skips dialogue while held down.")
-
-    hbox:
-        label _("Tab")
-        text _("Toggles dialogue skipping.")
-
-    hbox:
-        label _("Page Up")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
-        label _("Page Down")
-        text _("Rolls forward to later dialogue.")
-
-    hbox:
-        label "H"
-        text _("Hides the user interface.")
-
-    hbox:
-        label "S"
-        text _("Takes a screenshot.")
-
-    hbox:
-        label "V"
-        text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
-
-    hbox:
-        label "Shift+A"
-        text _("Opens the accessibility menu.")
-
-
-screen mouse_help():
-
-    hbox:
-        label _("Left Click")
-        text _("Advances dialogue and activates the interface.")
-
-    hbox:
-        label _("Middle Click")
-        text _("Hides the user interface.")
-
-    hbox:
-        label _("Right Click")
-        text _("Accesses the game menu.")
-
-    hbox:
-        label _("Mouse Wheel Up")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
-        label _("Mouse Wheel Down")
-        text _("Rolls forward to later dialogue.")
-
-
-screen gamepad_help():
-
-    hbox:
-        label _("Right Trigger\nA/Bottom Button")
-        text _("Advances dialogue and activates the interface.")
-
-    hbox:
-        label _("Left Trigger\nLeft Shoulder")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
-        label _("Right Shoulder")
-        text _("Rolls forward to later dialogue.")
-
-    hbox:
-        label _("D-Pad, Sticks")
-        text _("Navigate the interface.")
-
-    hbox:
-        label _("Start, Guide, B/Right Button")
-        text _("Accesses the game menu.")
-
-    hbox:
-        label _("Y/Top Button")
-        text _("Hides the user interface.")
-
-    textbutton _("Calibrate") action GamepadCalibrate()
-
-
-style help_button is gui_button
-style help_button_text is gui_button_text
-style help_label is gui_label
-style help_label_text is gui_label_text
-style help_text is gui_text
-
-style help_button:
-    properties gui.button_properties("help_button")
-    xmargin 12
-
-style help_button_text:
-    properties gui.text_properties("help_button")
-
-style help_label:
-    xsize 375
-    right_padding 30
-
-style help_label_text:
-    size gui.text_size
-    xalign 1.0
-    textalign 1.0
 
 
 
@@ -1087,124 +926,6 @@ style notify_frame:
 
 style notify_text:
     properties gui.text_properties("notify")
-
-
-## NVL screen ##################################################################
-##
-## This screen is used for NVL-mode dialogue and menus.
-##
-## https://www.renpy.org/doc/html/screen_special.html#nvl
-
-
-screen nvl(dialogue, items=None):
-
-    window:
-        style "nvl_window"
-
-        has vbox:
-            spacing gui.nvl_spacing
-
-        ## Displays dialogue in either a vpgrid or the vbox.
-        if gui.nvl_height:
-
-            vpgrid:
-                cols 1
-                yinitial 1.0
-
-                use nvl_dialogue(dialogue)
-
-        else:
-
-            use nvl_dialogue(dialogue)
-
-        ## Displays the menu, if given. The menu may be displayed incorrectly if
-        ## config.narrator_menu is set to True.
-        for i in items:
-
-            textbutton i.caption:
-                action i.action
-                style "nvl_button"
-
-    add SideImage() xalign 0.0 yalign 1.0
-
-
-screen nvl_dialogue(dialogue):
-
-    for d in dialogue:
-
-        window:
-            id d.window_id
-
-            fixed:
-                yfit gui.nvl_height is None
-
-                if d.who is not None:
-
-                    text d.who:
-                        id d.who_id
-
-                text d.what:
-                    id d.what_id
-
-
-## This controls the maximum number of NVL-mode entries that can be displayed at
-## once.
-define config.nvl_list_length = gui.nvl_list_length
-
-style nvl_window is default
-style nvl_entry is default
-
-style nvl_label is say_label
-style nvl_dialogue is say_dialogue
-
-style nvl_button is button
-style nvl_button_text is button_text
-
-style nvl_window:
-    xfill True
-    yfill True
-
-    background "gui/nvl.png"
-    padding gui.nvl_borders.padding
-
-style nvl_entry:
-    xfill True
-    ysize gui.nvl_height
-
-style nvl_label:
-    xpos gui.nvl_name_xpos
-    xanchor gui.nvl_name_xalign
-    ypos gui.nvl_name_ypos
-    yanchor 0.0
-    xsize gui.nvl_name_width
-    min_width gui.nvl_name_width
-    textalign gui.nvl_name_xalign
-
-style nvl_dialogue:
-    xpos gui.nvl_text_xpos
-    xanchor gui.nvl_text_xalign
-    ypos gui.nvl_text_ypos
-    xsize gui.nvl_text_width
-    min_width gui.nvl_text_width
-    textalign gui.nvl_text_xalign
-    layout ("subtitle" if gui.nvl_text_xalign else "tex")
-
-style nvl_thought:
-    xpos gui.nvl_thought_xpos
-    xanchor gui.nvl_thought_xalign
-    ypos gui.nvl_thought_ypos
-    xsize gui.nvl_thought_width
-    min_width gui.nvl_thought_width
-    textalign gui.nvl_thought_xalign
-    layout ("subtitle" if gui.nvl_text_xalign else "tex")
-
-style nvl_button:
-    properties gui.button_properties("nvl_button")
-    xpos gui.nvl_button_xpos
-    xanchor gui.nvl_button_xalign
-
-style nvl_button_text:
-    properties gui.text_properties("nvl_button")
 
 
 ## Bubble screen ###############################################################

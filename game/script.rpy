@@ -5,26 +5,30 @@
 
 define b = Character("bunbun")
 
+define n = Character("")
+
 image bunbun test:
     "bunbun test1.png"
     0.5
     "bunbun test2.png"
     0.5
     repeat
-
-screen windowframe():
-    image "gui/windowframe.png"
-    zorder 100
-
+     
 # The game starts here.
 
 label start:
 
+    stop music
+
     scene bg empty
 
+    show screen actionmenu
+
     show screen windowframe
-    
-    show bunbun test at right
+
+    n "And so it begins"
+
+    show bunbun test
 
     b "The quick brown fox jumps over the lazy dog."
 

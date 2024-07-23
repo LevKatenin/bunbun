@@ -101,8 +101,8 @@ define gui.title_text_size = 90
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
-define gui.game_menu_background = "gui/game_menu.png"
+define gui.main_menu_background = "rainmenu"
+define gui.game_menu_background = "rainmenu"
 
 
 ## Dialogue ####################################################################
@@ -115,11 +115,15 @@ define gui.textbox_height = 250
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
-define gui.textbox_yalign = 1.0
+define gui.textbox_yalign = 0.98
+
+## The placement of the textbox horizontally on the screen. 0.0 is the top, 0.5 is
+## center, and 1.0 is the bottom.
+define gui.textbox_xalign = 0.98
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 480
+define gui.name_xpos = 125
 define gui.name_ypos = 5
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
@@ -142,7 +146,7 @@ define gui.namebox_tile = False
 ## The placement of dialogue relative to the textbox. These can be a whole
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
-define gui.dialogue_xpos = 500
+define gui.dialogue_xpos = 100
 define gui.dialogue_ypos = 80
 
 ## The maximum width of dialogue text, in pixels.
@@ -346,50 +350,6 @@ define gui.vslider_borders = Borders(6, 6, 6, 6)
 ## What to do with unscrollable scrollbars in the gui. "hide" hides them, while
 ## None shows them.
 define gui.unscrollable = "hide"
-
-
-## NVL-Mode ####################################################################
-##
-## The NVL-mode screen displays the dialogue spoken by NVL-mode characters.
-
-## The borders of the background of the NVL-mode background window.
-define gui.nvl_borders = Borders(0, 15, 0, 30)
-
-## The maximum number of NVL-mode entries Ren'Py will display. When more entries
-## than this are to be show, the oldest entry will be removed.
-define gui.nvl_list_length = 6
-
-## The height of an NVL-mode entry. Set this to None to have the entries
-## dynamically adjust height.
-define gui.nvl_height = 173
-
-## The spacing between NVL-mode entries when gui.nvl_height is None, and between
-## NVL-mode entries and an NVL-mode menu.
-define gui.nvl_spacing = 15
-
-## The position, width, and alignment of the label giving the name of the
-## speaking character.
-define gui.nvl_name_xpos = 645
-define gui.nvl_name_ypos = 0
-define gui.nvl_name_width = 225
-define gui.nvl_name_xalign = 1.0
-
-## The position, width, and alignment of the dialogue text.
-define gui.nvl_text_xpos = 675
-define gui.nvl_text_ypos = 12
-define gui.nvl_text_width = 885
-define gui.nvl_text_xalign = 0.0
-
-## The position, width, and alignment of nvl_thought text (the text said by the
-## nvl_narrator character.)
-define gui.nvl_thought_xpos = 360
-define gui.nvl_thought_ypos = 0
-define gui.nvl_thought_width = 1170
-define gui.nvl_thought_xalign = 0.0
-
-## The position of nvl menu_buttons.
-define gui.nvl_button_xpos = 675
-define gui.nvl_button_xalign = 0.0
 
 
 ## Localization ################################################################
