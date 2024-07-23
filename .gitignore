@@ -150,12 +150,12 @@ dmypy.json
 .terragrunt-cache
 .terraform
 
-# errors.txt
-# /game/cache
-# errors.txt
-# log.txt
-# traceback.txt
-# errors.txt
-# /game/saves
-# errors.txt
-# /game/saves
+errors.txt
+/game/cache
+errors.txt
+log.txt
+traceback.txt
+errors.txt
+/game/saves
+errors.txt
+/game/saves
