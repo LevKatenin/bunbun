@@ -72,12 +72,12 @@ ________________________________________________________________________________
     show window with a keyhole -> click to put in a key -> drag the side of the key to rotate it -> finish, close the window
 
 ### Computer interactions
-    #### TODO. WIP. add a website scrolling animation. text and placeholder being displayed, going up and disappearing
+     TODO. WIP. add a website scrolling animation. text and placeholder being displayed, going up and disappearing
         add drawing mini-game. show empty window -> click to draw with a basic pencil -> possibly make it save-able?????
         basic desktop "game". when opened the desktop has random files -> drag and drop them into the recycle bin -> remove entity
             add system32 to desktop, make it deleteable, make it disable clicking (using) the computer
         sudoku minigame. steal sudoku generator code, remove some numbers, add input box with input limitations (or dropdown select)
-    #### add "buncord" (discord) - you input messages, they display in a window, scrolling up, and with a random interval the "friend" replies
+     add "buncord" (discord) - you input messages, they display in a window, scrolling up, and with a random interval the "friend" replies
         (all they say is scripted messages like "LOL" "that's crazy" "based" "cringe" etc.)
 
 ### If under status effect (extra low or high stat), unlock special item interactions
