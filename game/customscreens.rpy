@@ -1,5 +1,4 @@
 
-
 ## The game overlay frame
 
 screen windowframe():
@@ -14,6 +13,55 @@ screen inventory():
     image "gui/inventorybox.png" xpos 30 ypos 30 zoom 2.0
     zorder 60
 
+    vpgrid:
+        mousewheel True
+
+        xysize (400, 750)
+        
+        xpos 75
+        ypos 150
+
+        cols 1
+        spacing 5
+        xspacing 200
+
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+        textbutton "item"
+
 ## Action menu that lets the player choose what to do
 
 screen actionmenu():
@@ -26,7 +74,7 @@ screen actionmenu():
     grid 2 2:
         xpos 1540 ypos 840         
 
-        textbutton _("squeak") action Play("action", config.sample_sound) #this is a test button. todo: pull up a choice menu based on location
+        textbutton _("action") action Play("sound", config.sample_sound) #this is a test button. todo: pull up a choice menu based on location
           
         textbutton _("items") xpadding 20 action ToggleScreen("inventory") ##todo: add inventory management and mouse-over info menu
         
