@@ -9,6 +9,7 @@ screen windowframe():
 ## Action menu that lets the player choose what to do
 
 screen actionmenu():
+    modal True
     style_prefix "actionmenu"
 
     image "gui/actionmenu.png" xpos 1480 ypos 780 zoom 2.0

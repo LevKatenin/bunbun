@@ -5,7 +5,7 @@
 
 define b = Character("bunbun")
 
-define n = Character("")
+define n = None
 
 image bunbun test:
     "bunbun test1.png"
@@ -22,8 +22,6 @@ label start:
 
     scene bg empty
 
-    show screen actionmenu
-
     show screen windowframe
 
     n "And so it begins"
@@ -37,5 +35,10 @@ label start:
     b "Translate this too please."
 
     b "I am just a test sprite. You will likely never see me again! I am just a test sprite. You will likely never see me again! I am just a test sprite. You will likely never see me again! I am just a test sprite. You will likely never see me again!"
+
+    show screen actionmenu
+    window hide
+
+    pause(1.0)
 
     return
