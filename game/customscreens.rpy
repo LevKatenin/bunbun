@@ -26,11 +26,11 @@ screen actionmenu():
     grid 2 2:
         xpos 1540 ypos 840         
 
-        textbutton _("squeak") action Play("sound", config.sample_sound)
+        textbutton _("squeak") action Play("action", config.sample_sound) #this is a test button. todo: pull up a choice menu based on location
           
-        textbutton _("items") xpadding 20 action ToggleScreen("inventory")
+        textbutton _("items") xpadding 20 action ToggleScreen("inventory") ##todo: add inventory management and mouse-over info menu
         
-        textbutton _("Button3") ypadding 10
+        textbutton _("go to") ypadding 10 #this is where you add the menu that has several "jumps"
             
-        textbutton _("Button4") xpadding 20 ypadding 10
+        textbutton _("sleep") xpadding 20 ypadding 10 #this is where you call the "advance day" function. update flags, show a dream and change date and time
 
