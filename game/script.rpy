@@ -39,6 +39,6 @@ label start:
     show screen actionmenu
     window hide
 
-    pause(1.0)
+    pause
 
     return
